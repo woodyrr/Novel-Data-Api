@@ -28,7 +28,7 @@ try{
     const chapTitle = $('.chapter-title').get().map(val => $(val).text())
     const novelText = $('.chapter-c').get().map(val => $(val).text())
     const novelName = $('.truyen-title').get().map(val => $(val).text())
-    res.send({data: chapTitle, novelName, novelText})
+    res.status(200).send({data: chapTitle, novelName, novelText})
 
 }catch{
     res.status(500).send({message: err.message})
